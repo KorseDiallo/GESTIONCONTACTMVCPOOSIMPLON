@@ -1,0 +1,28 @@
+je dois creer une base de donnée appeler gestionContact
+
+dans cette base de donnée je vais creer une table appeler contact qui contient
+
+un id de type int en autoincrement 
+un nom de type varchar
+un prenom de type varchard 
+favoris de type ENUM(oui,non) par defaud à non
+
+-------------------------------------
+CREATE DATABASE gestionContact;
+
+
+
+----------------------------------
+
+CREATE TABLE contact (
+    id INT AUTO_INCREMENT,
+    nom VARCHAR(255),
+    prenom VARCHAR(255),
+    telephone VARCHAR(20), 
+    favoris ENUM('oui', 'non') DEFAULT 'non',
+    PRIMARY KEY (id)
+);
+
+
+---------------------------------------------
+
