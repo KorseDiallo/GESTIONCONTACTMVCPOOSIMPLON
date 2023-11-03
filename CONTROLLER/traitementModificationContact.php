@@ -25,15 +25,20 @@ $ancienNom = $ancienPrenom = $ancienTelephone = '';
   }
 
   if (isset($_POST["modifier"])) {
-     $nouveauNom = $_POST["nom"];
-     $nouveauPrenom = $_POST["prenom"];
-     $nouveauTelephone = $_POST["telephone"];
+    if(!empty($nouveauNom) && !empty($nouveauPrenom) && !empty($nouveauTelephone)){
+      $nouveauNom = $_POST["nom"];
+      $nouveauPrenom = $_POST["prenom"];
+      $nouveauTelephone = $_POST["telephone"];
+  
+     
+      Contact::modifier($mysqlClient, $id, $nouveauNom, $nouveauPrenom, $nouveauTelephone);
  
+     header("Location: /MVCGESTIONCONTACT/VIEW/admin.php");
+ 
+    }else{
+      echo "les champs ne doivent pas être vident";
+    }
     
-     Contact::modifier($mysqlClient, $id, $nouveauNom, $nouveauPrenom, $nouveauTelephone);
-
-    header("Location: /MVCGESTIONCONTACT/VIEW/admin.php");
-
   }
 
 ?>
