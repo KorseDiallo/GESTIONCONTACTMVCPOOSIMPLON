@@ -13,7 +13,7 @@
     <div class="container ">
         <div class="row mt-5">
             <div class="col-lg-4 bg-white m-auto rounded-top">
-                <h2 class="text-center"> Ajouter Un Contacts</h2>
+                <h2 class="text-center"> Ajouter Un Contact</h2>
                 <p class="text-center text-muted lead"> Simple et Rapide </p>
 
                 <form action="../CONTROLLER/traitementAjouterContact.php" method="post">
